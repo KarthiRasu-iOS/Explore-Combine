@@ -113,7 +113,10 @@ class ViewController: UIViewController {
 
 ```
 
-[Demo video](https://raw.githubusercontent.com/KarthiRasu-iOS/Explore-Combine/master/demo/Combine-Demo-A.mp4)
+
+[!Demo](https://raw.githubusercontent.com/KarthiRasu-iOS/Explore-Combine/master/demo/combine_demo_a.gif)
 
 
+#Publishers and Subscribers
 
+A publisher publish values and a subscriber subscribe's to receive publisher's value

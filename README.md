@@ -3,8 +3,10 @@
 ## Apple's guide : Customize handling of asynchronous events by combining event-processing operators. The Combine framework provides a declarative Swift API for processing values over time 🤔
 
 > [!Note]
-> Declarative ? 
+> Declarative ?
+
 > Definition : A paradigm focuses on what the program should accomplish, without specifying how to achieve it. The programmer defines the desired result, and the system takes care of the underlying steps to achieve it.
+
 > Realtime Example : Ordering a meal at a restaurant by saying, "I want a pizza with extra cheese" (you state the result you want). As we don't know the underlying process of making pizza in that restaurant it's called declarative
 
 ## Swift UI is an declarative Framework
@@ -16,7 +18,9 @@ Above we declared the Text to render in UI, and SwiftUI handles the rendering.
 
 > [!Note]
 > Imperative ?
+
 > Definition : A paradigm focuses on how the program should operate, specifying a sequence of commands to execute tasks.
+
 > Realtime Example : Making the pizza yourself, step by step: preparing the dough, adding toppings, baking it, and serving it.
 
 ## UIKit is an imperative Framwork
@@ -108,3 +112,7 @@ class ViewController: UIViewController {
 }
 
 ```
+
+<video src="https://github.com/KarthiRasu-iOS/Explore-Combine/blob/master/demo/Combine-Demo-A.mp4"/>
+
+

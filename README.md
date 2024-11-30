@@ -113,6 +113,7 @@ class ViewController: UIViewController {
 
 ```
 
-<video src="https://github.com/KarthiRasu-iOS/Explore-Combine/blob/master/demo/Combine-Demo-A.mp4"/>
+[Demo video](https://raw.githubusercontent.com/KarthiRasu-iOS/Explore-Combine/master/demo/Combine-Demo-A.mp4)
+
 
 

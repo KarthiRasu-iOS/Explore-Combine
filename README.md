@@ -3,10 +3,8 @@
 ## Apple's guide : Customize handling of asynchronous events by combining event-processing operators. The Combine framework provides a declarative Swift API for processing values over time 🤔
 
 > [!Note]
-> Declarative ?
-
+> What is Declarative?
 > Definition : A paradigm focuses on what the program should accomplish, without specifying how to achieve it. The programmer defines the desired result, and the system takes care of the underlying steps to achieve it.
-
 > Realtime Example : Ordering a meal at a restaurant by saying, "I want a pizza with extra cheese" (you state the result you want). As we don't know the underlying process of making pizza in that restaurant it's called declarative
 
 ## Swift UI is an declarative Framework
@@ -17,10 +15,8 @@ Text("Hello, World!")
 Above we declared the Text to render in UI, and SwiftUI handles the rendering.
 
 > [!Note]
-> Imperative ?
-
+> What is Imperative?
 > Definition : A paradigm focuses on how the program should operate, specifying a sequence of commands to execute tasks.
-
 > Realtime Example : Making the pizza yourself, step by step: preparing the dough, adding toppings, baking it, and serving it.
 
 ## UIKit is an imperative Framwork
@@ -114,9 +110,48 @@ class ViewController: UIViewController {
 ```
 
 
-[!Demo](https://raw.githubusercontent.com/KarthiRasu-iOS/Explore-Combine/master/demo/combine_demo_a.gif)
+![Demo](https://raw.githubusercontent.com/KarthiRasu-iOS/Explore-Combine/master/demo/combine_demo_a.gif)
 
 
-#Publishers and Subscribers
+## Publisher protocol
 
-A publisher publish values and a subscriber subscribe's to receive publisher's value
+A publisher is nothing more than an object that emit a stream of values over time.
+These values can be consumed by one or more subscribers, which can then update the state of user interface or perfrom any other actions.
+
+> [!Note]
+> Built In Publishers :- 
+> Just
+> Future
+> PassthroughSubject
+> CurrentValueSubject
+
+
+## Passthrough Subject 
+
+- **Purpose**: A simple subject for broadcasting values to subscribers.
+- **Behavior**:
+  - Does not store any value.
+  - Subscribers only receive values that are emitted *after* they subscribe.
+  - Useful for sending events or signals that don’t need to maintain state or replay previous values.
+- **Example Use Case**: Triggering an action, such as notifying subscribers when a button is tapped.
+
+## CurrentValueSubject
+
+- **Purpose**: A subject that keeps a current value and emits it to new subscribers.
+- **Behavior**:
+    - Stores the most recent value.
+    - New subscribers receive the latest value immediately upon subscription, followed by any subsequent values.
+    - Useful for state management where you need to keep track of the latest value.
+    
+- **Example Use Case**: Sharing the current state of an application, such as the current selected tab or theme.
+
+
+## Passthorugh Subject vs CurrentValueSubject
+
+
+| Feature  | PassthroughSubject | CurrentValueSubject
+| ------------- | ------------- | ------------- |
+| Initial Value | None  | Requires an initial value.
+| State Storage  | Does not store values.  |  Stores the latest value.
+| Subscriber Behavior  | Subscribers only get new values.  |  Subscribers get the current value and new values.
+| Use Case | Event broadcasting (e.g., button taps). |  State sharing (e.g., current app state).

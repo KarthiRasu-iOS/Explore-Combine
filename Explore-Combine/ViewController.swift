@@ -22,6 +22,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var saveChangesBtn : UIButton!
 
 
+    let publishers = PublishersExample()
+    
     override func viewDidLoad() {
         
         switchSubscriber = $isShareEnabled
